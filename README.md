@@ -1,21 +1,25 @@
-# Aplikacja konsolowa: Quiz / Ankieta
+# Quiz / Ankieta
+
+Konsolowa aplikacja w C#/.NET do przygotowywania quizów i ankiet oraz zbierania odpowiedzi. Projekt jest rozwijany przyrostowo przez semestr jako wspólna praca zespołu.
 
 ## Problem
 
-Dostępne narzędzia online do prostych zadań dydaktycznych i ewaluacyjnych bywają zbyt rozbudowane i rozpraszające. W salach komputerowych problemem jest także niestabilny dostęp do internetu, konieczność logowania oraz restrykcyjne polityki IT. Rozproszone wyniki utrudniają ich eksport do ocen i raportów.
+Rozbudowane narzędzia online bywają niepotrzebnie złożone przy prostych zadaniach dydaktycznych i ewaluacyjnych. W salach komputerowych przeszkadzają też niestabilny internet, logowanie i ograniczenia IT, a rozproszone wyniki utrudniają przygotowanie ocen i raportów.
 
-## Odbiorcy
+## Dla kogo
 
-- **Prowadzący zajęcia, trenerzy i HR:** chcą szybko przygotować quiz lub ankietę i zebrać wyniki bez logowania, kont i dostępu do sieci.
-- **Studenci i uczestnicy szkoleń:** chcą szybko udzielić odpowiedzi i poznać jasny wynik, bez zakładania kont i przeklikiwania reklam.
-- **Uczelnie i firmy:** potrzebują prostego narzędzia działającego w salach komputerowych, na słabszych laptopach i w środowiskach z ograniczeniami.
+- **Prowadzący, trenerzy i HR** chcą szybko przygotować zestaw i zebrać wyniki bez kont oraz dostępu do sieci.
+- **Studenci i uczestnicy szkoleń** chcą łatwo udzielić odpowiedzi i otrzymać czytelny rezultat.
+- **Uczelnie i firmy** potrzebują prostego narzędzia do pracy offline, również na słabszych komputerach.
 
-## Wartość produktu
+## Cel i założenia
 
-- **Błyskawiczny start:** prowadzący przygotowuje zestaw na miejscu, uruchamia go i zbiera wyniki w kilka minut.
-- **Prostota:** brak kont i przeglądarki oraz łatwe przenoszenie aplikacji bez złożonej instalacji.
-- **Pełna kontrola nad danymi:** odpowiedzi są początkowo przechowywane w pamięci operacyjnej. Wybór bazy danych do trwałego zapisu będzie późniejszą decyzją projektową. Wyniki będzie można łatwo wyeksportować do arkusza kalkulacyjnego, na przykład w formacie CSV.
-- **Niezawodność:** aplikacja działa w pełni offline, bez dostępu do usług chmurowych.
+- Aplikacja działa w konsoli i nie wymaga przeglądarki, konta ani połączenia z internetem.
+- Odpowiedzi są początkowo przechowywane w pamięci operacyjnej. Sposób trwałego zapisu wybierzemy po analizie wymagań biznesowych i technicznych.
+- Import i eksport danych będą obsługiwać pliki CSV.
+- Rozwiązanie i decyzje projektowe będą doprecyzowywane przez zespół na podstawie wspólnych wymagań kursu.
+
+Szczegółowe wymagania, przypadki użycia, wstępne User Stories i propozycję kontraktu CLI opisuje [dokument wymagań](docs/wymagania.md). Zasady rozwoju, pracy na laboratoriach, GitHub Flow oraz kryteria DoR i DoD znajdują się w [opisie procesu zespołowego](docs/proces-zespolowy.md).
 
 ## Zespół
 
@@ -24,28 +28,26 @@ Dostępne narzędzia online do prostych zadań dydaktycznych i ewaluacyjnych byw
 - Mikołaj Bernaciak
 - Karol Staszewski
 
----
+## Jak rozwijamy projekt
 
-## Jak pracujemy w zespole
+Projekt rozwijamy przyrostowo przez cały semestr. Laboratoria pomagają rozpocząć kolejne etapy, przećwiczyć techniki, omówić problemy i ustalić dalsze zadania. Większość pracy nad projektem wykonujemy między zajęciami.
 
-### Od zadania do zmiany
+Pracujemy iteracyjnie przez etapy SDLC: **discovery → analiza → projektowanie → implementacja → weryfikacja → wydanie**. Wracamy do nich przy kolejnych przyrostach i zmianach wymagań.
 
-Wszystkie zmiany wprowadzamy zgodnie z GitHub Flow: `Issue` → `branch` (gałąź) → `Pull Request (PR)` → `review` → `merge`. Od drugiego warsztatu nie commitujemy bezpośrednio do gałęzi `main`.
+## Współpraca i GitHub Flow
 
-### Review
+Zmiany realizujemy przez `Issue` → `branch` → `Pull Request (PR)` → `review` → `merge`. Proces ćwiczymy na laboratoriach; od drugiego warsztatu nie commitujemy bezpośrednio do gałęzi `main`.
 
-Podczas przeglądu sprawdzamy dokumentację, kod oraz wszystkie pozostałe wprowadzane zmiany. Weryfikujemy zgodność rozwiązania z zasadami kursu i celami zadania `Issue`, a także jednoznaczność i użyteczność ustaleń. Akceptujemy zmianę (`Approve`), gdy jej rezultat został sprawdzony, ewentualne uwagi wyjaśniono i uwzględniono, a praca spełnia założenia Definition of Done (DoD).
+Pracę organizujemy na tablicy GitHub Projects:
 
-### Tablica zadań
+- **To do** — zadanie jest gotowe do rozpoczęcia.
+- **In progress** — ktoś pracuje nad zadaniem.
+- **In review** — PR czeka na sprawdzenie przez inną osobę.
+- **Done** — PR został zaakceptowany i scalony, uwagi rozpatrzono, a powiązane Issue zamknięto.
 
-Pracę organizujemy na tablicy GitHub Project.
+Przed rozpoczęciem zadanie powinno spełniać **Definition of Ready (DoR)**. Uznajemy je za zakończone po spełnieniu **Definition of Done (DoD)**. Proponowane checklisty i zasady review są w [opisie procesu zespołowego](docs/proces-zespolowy.md).
 
-- **To do:** zadanie czeka na rozpoczęcie.
-- **In progress:** praca jest w trakcie realizacji, na przykład utworzono branch i trwają prace.
-- **In review:** zmiana jest gotowa i czeka na weryfikację przez innego członka zespołu; otwarto PR.
-- **Done:** rezultat został sprawdzony (`Approve`), uwagi z review rozpatrzono, PR scalono z gałęzią `main`, powiązane zadanie (`Issue`) zamknięto, a status karty na tablicy GitHub Project zmieniono na Done.
+## Komunikacja
 
-### Komunikacja
-
-- Pytania z fazy *discovery* oraz odpowiedzi prowadzącego (sponsora) publikujemy na głównym kanale przedmiotu w MS Teams.
-- Bieżące sprawy organizacyjne, konsultacje, problemy zespołu i blokery, na przykład konflikty scalania, omawiamy na wewnętrznym kanale zespołu w MS Teams.
+- Pytania z fazy *discovery* i odpowiedzi prowadzącego publikujemy na głównym kanale przedmiotu w MS Teams.
+- Sprawy organizacyjne, konsultacje, problemy i blokery omawiamy na wewnętrznym kanale zespołu w MS Teams.
