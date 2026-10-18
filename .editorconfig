@@ -1,0 +1,31 @@
+# Wspólne ustawienia edycji plików projektu (EditorConfig).
+# root = true: nie szukamy konfiguracji w katalogach nadrzędnych.
+root = true
+
+# Ustawienia dla wszystkich plików.
+[*]
+# Kodowanie UTF-8 (polskie znaki w dokumentacji i danych).
+charset = utf-8
+# Zakończenia linii LF, żeby uniknąć różnic między systemami w historii Gita.
+end_of_line = lf
+# Plik kończy się znakiem nowej linii.
+insert_final_newline = true
+# Usuwamy zbędne spacje na końcach linii.
+trim_trailing_whitespace = true
+
+# Markdown: wcięcia dwiema spacjami (np. listy zagnieżdżone).
+[*.md]
+indent_style = space
+indent_size = 2
+# W Markdown dwie spacje na końcu linii mogą oznaczać złamanie wiersza.
+trim_trailing_whitespace = false
+
+# Pliki YAML (np. nagłówki szablonów w .github).
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Kod C# (będzie potrzebny od LAB 2): cztery spacje, powszechna konwencja .NET.
+[*.cs]
+indent_style = space
+indent_size = 4

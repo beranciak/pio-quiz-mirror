@@ -1,0 +1,22 @@
+# Pliki tymczasowe
+*.tmp
+*.bak
+
+# Tymczasowe pliki blokady Excela (powstają przy otwartym pliku CSV)
+~$*
+
+# Lokalne ustawienia i pamięć podręczna Visual Studio
+.vs/
+*.user
+*.suo
+
+# Wyniki budowania .NET (pojawią się od LAB 2)
+bin/
+obj/
+TestResults/
+
+# Pliki systemowe
+Thumbs.db
+.DS_Store
+
+# Uwaga: nie ignorujemy plików *.csv, bo mogą być potrzebnymi danymi testowymi.
