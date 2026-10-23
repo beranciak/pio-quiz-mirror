@@ -19,4 +19,9 @@ Autor zaznacza punkty po ich spełnieniu (zgodnie z DoD w `docs/process-checklis
 - [ ] Dokument sprawdzono w podglądzie Markdown (nagłówki, listy, linki)
 - [ ] W PR nie ma plików tymczasowych ani niepowiązanych zmian
 - [ ] Wskazano recenzenta, a zadanie ma status In review
-- [ ] Po Approve i scaleniu: Issue zamknięte, karta ma status Done, `main` pobrany i sprawdzony
+- [ ] Inny członek zespołu zakończył merytoryczne review akceptacją Approve
+
+### Po scaleniu (uzupełnia autor dopiero po merge)
+
+- [ ] Pobrano i sprawdzono wynik na `main`
+- [ ] Jeśli wykonano cały zakres Issue: zamknięto je i ustawiono Done; w przeciwnym razie pozostawiono otwarte i opisano dalszą pracę
