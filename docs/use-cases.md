@@ -27,10 +27,12 @@ Przypadki użycia (UC) opisują, jak użytkownik osiąga swój cel w aplikacji k
   - 4b. W quizie pytanie nie ma wskazanej poprawnej opcji: program nie dodaje pytania i wyjaśnia dlaczego. Ankieta nie wymaga poprawnych opcji.
   - 6a. Zestaw nie zawiera pytań: program odmawia publikacji i wraca do menu; zestaw pozostaje nieopublikowany.
   - 8a. Nie można zapisać pliku (np. brak dostępu do folderu): program wyjaśnia problem, zestaw pozostaje nieopublikowany, a program ponawia pytanie o ścieżkę.
+  - *a. Prowadzący w dowolnym kroku przed publikacją wybiera powrót do menu: program pyta, czy zachować niedokończony zestaw; po potwierdzeniu zestaw zostaje w programie jako nieopublikowany, w przeciwnym razie zostaje odrzucony. Program wraca do menu.
 - **Rezultat:** Zestaw jest opublikowany i niezmienny, a prowadzący ma plik do przekazania uczestnikom.
 - **Ustalenia i pytania:**
   - [Ustalenie] Publikacja tworzy „zamrożoną” wersję zestawu do rozwiązania. Źródło: wizja.
   - [Założenie] Plik przekazywany uczestnikom nie zawiera poprawnych odpowiedzi; klucz zostaje u prowadzącego.
+  - [Założenie] Niedokończony zestaw można zachować jako nieopublikowany i dokończyć później (do czasu zamknięcia programu).
   - [Pytanie] Czy po publikacji można utworzyć nową wersję zestawu na bazie istniejącego? Czy edytujemy wyłącznie zestawy niepublikowane?
 - **Powiązane wymagania:** US1.
 
