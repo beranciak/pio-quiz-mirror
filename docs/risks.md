@@ -34,19 +34,19 @@ Pole „Osoba odpowiedzialna” trzeba uzupełnić po uzgodnieniu w zespole. Wł
 
 **Opis:** Dane na początku są tylko w pamięci operacyjnej. Jeśli program zostanie zamknięty lub zawiesi się, zanim prowadzący wyeksportuje wyniki lub uczestnik zapisze odpowiedzi, wynik zajęć przepadnie.
 
-**Prawdopodobieństwo:** M. W typowych warunkach łatwo o przypadkowe zamknięcie okna konsoli.
+**Prawdopodobieństwo:** H. Plik dla uczestników nie zawiera klucza odpowiedzi, więc klucz istnieje tylko w pamięci programu prowadzącego od publikacji (UC1) do wczytania odpowiedzi (UC3). To może trwać godziny lub dni, a każde zamknięcie programu w tym czasie oznacza utratę klucza.
 
 **Wpływ:** H. Utrata wyników całej grupy nie do odtworzenia.
 
 **Strategia:** Łagodzenie.
 
-**Działanie:** Zapisać w kontrakcie ostrzeżenie przy zamykaniu programu, gdy są niewyeksportowane dane. Zapytać sponsora o oczekiwany poziom ochrony (kopie, odtwarzanie). Zaplanować trwały zapis na etap trwałości danych (LAB 3).
+**Działanie:** Zapytać sponsora, czy przy publikacji program może zapisać u prowadzącego osobny plik z kluczem odpowiedzi, wczytywany razem z zestawem (UC5). Zaplanować trwały zapis danych na LAB 3.
 
 **Osoba odpowiedzialna:** [do uzgodnienia w zespole]
 
-**Sygnał do reakcji:** Podczas przećwiczenia dialogu użytkownik kończy program z niewyeksportowanymi danymi.
+**Sygnał do reakcji:** Brak decyzji o sposobie przechowywania klucza odpowiedzi przed rozpoczęciem implementacji wyników quizu.
 
-**Reakcja:** Wzmocnić ostrzeżenie lub zapis automatyczny, uzgodnić zmianę ze sponsorem.
+**Reakcja:** Przyjąć jako założenie zapis osobnego pliku z kluczem i oznaczyć je w UC1 i UC5 do potwierdzenia przez sponsora.
 
 ### R3: Problemy z formatem CSV i wymianą plików
 
@@ -74,9 +74,9 @@ Pole „Osoba odpowiedzialna” trzeba uzupełnić po uzgodnieniu w zespole. Wł
 
 **Wpływ:** H. Wizja wymaga uruchamiania bez złożonej instalacji; brak uruchomienia przekreśla wartość produktu.
 
-**Strategia:** Łagodzenie.
+**Strategia:** Unikanie (zależności od zainstalowanego .NET) i łagodzenie (blokady uruchamiania).
 
-**Działanie:** Zapytać sponsora, co jest zainstalowane na komputerach i jak przekazywać aplikację. Zaplanować wydanie możliwe do uruchomienia bez instalacji i sprawdzić je na „czystym” komputerze.
+**Działanie:** **Działanie:** Wydawać aplikację w wersji self-contained, czyli z wbudowanym środowiskiem .NET, aby nie zależała od tego, co jest zainstalowane na komputerze. Zapytać sponsora o blokady uruchamiania programów na komputerach uczelnianych i sprawdzić wydanie na „czystym” komputerze.
 
 **Osoba odpowiedzialna:** [do uzgodnienia w zespole]
 
