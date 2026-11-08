@@ -18,18 +18,21 @@ Przypadki użycia (UC) opisują, jak użytkownik osiąga swój cel w aplikacji k
   4. Prowadzący dodaje pytanie: podaje treść, typ (jednokrotnego lub wielokrotnego wyboru) i opcje odpowiedzi; dla quizu wskazuje poprawne opcje.
   5. Program potwierdza dodanie pytania. Prowadzący powtarza krok 4 dla kolejnych pytań i kończy dodawanie.
   6. Prowadzący wybiera opcję publikacji zestawu.
-  7. Program sprawdza kompletność zestawu, oznacza go jako opublikowany (niezmienny) i zapisuje plik zestawu dla uczestników w formacie CSV pod podaną ścieżką.
-  8. Program potwierdza publikację i podaje ścieżkę pliku.
+  7. Program pyta o ścieżkę zapisu, a prowadzący ją podaje.
+  8. Program sprawdza kompletność zestawu, oznacza go jako opublikowany (niezmienny) i zapisuje plik zestawu dla uczestników w formacie CSV pod podaną ścieżką.
+  9. Program potwierdza publikację i podaje ścieżkę pliku.
 - **Alternatywy i błędy:**
   - 3a. Tytuł jest pusty: program informuje, że tytuł jest wymagany, i ponawia pytanie o tytuł.
   - 4a. Pytanie ma mniej niż dwie opcje albo pustą treść: program wyjaśnia, co poprawić, i nie dodaje pytania.
   - 4b. W quizie pytanie nie ma wskazanej poprawnej opcji: program nie dodaje pytania i wyjaśnia dlaczego. Ankieta nie wymaga poprawnych opcji.
   - 6a. Zestaw nie zawiera pytań: program odmawia publikacji i wraca do menu; zestaw pozostaje nieopublikowany.
-  - 7a. Nie można zapisać pliku (np. brak dostępu do folderu): program wyjaśnia problem, zestaw pozostaje nieopublikowany, a program ponawia pytanie o ścieżkę.
+  - 8a. Nie można zapisać pliku (np. brak dostępu do folderu): program wyjaśnia problem, zestaw pozostaje nieopublikowany, a program ponawia pytanie o ścieżkę.
+  - *a. Prowadzący w dowolnym kroku przed publikacją wybiera powrót do menu: program pyta, czy zachować niedokończony zestaw; po potwierdzeniu zestaw zostaje w programie jako nieopublikowany, w przeciwnym razie zostaje odrzucony. Program wraca do menu.
 - **Rezultat:** Zestaw jest opublikowany i niezmienny, a prowadzący ma plik do przekazania uczestnikom.
 - **Ustalenia i pytania:**
   - [Ustalenie] Publikacja tworzy „zamrożoną” wersję zestawu do rozwiązania. Źródło: wizja.
   - [Założenie] Plik przekazywany uczestnikom nie zawiera poprawnych odpowiedzi; klucz zostaje u prowadzącego.
+  - [Założenie] Niedokończony zestaw można zachować jako nieopublikowany i dokończyć później (do czasu zamknięcia programu).
   - [Pytanie] Czy po publikacji można utworzyć nową wersję zestawu na bazie istniejącego? Czy edytujemy wyłącznie zestawy niepublikowane?
 - **Powiązane wymagania:** US1.
 
@@ -105,6 +108,24 @@ Przypadki użycia (UC) opisują, jak użytkownik osiąga swój cel w aplikacji k
   - [Pytanie] Czym różnią się wyniki quizu od ankiety i jakie statystyki są potrzebne (punkty, średnia, rozkład)?
   - [Pytanie] Jaki jest zakres eksportu: tylko podsumowanie, czy także odpowiedzi poszczególnych uczestników?
 - **Powiązane wymagania:** US4, US5.
+## UC5: Wczytaj zestaw z pliku
+
+- **Aktor:** Prowadzący.
+- **Cel:** Mieć w programie zapisany wcześniej zestaw pytań, aby móc wczytać do niego odpowiedzi uczestników (np. po ponownym uruchomieniu programu).
+- **Warunek początkowy:** Program jest uruchomiony i wyświetla menu główne, a prowadzący ma plik zestawu zapisany na komputerze.
+- **Przepływ główny:**
+  1. Prowadzący wybiera opcję wczytania zestawu z pliku.
+  2. Program prosi o ścieżkę do pliku zestawu, a prowadzący ją podaje.
+  3. Program wczytuje i sprawdza plik.
+  4. Program informuje o tytule, rodzaju zestawu i liczbie pytań oraz dodaje zestaw do listy zestawów w programie.
+- **Alternatywy i błędy:**
+  - 2a. Plik o podanej ścieżce nie istnieje: program wyświetla komunikat o nieistniejącej ścieżce i ponawia pytanie o ścieżkę; prowadzący może wrócić do menu.
+  - 3a. Plik ma niepoprawny format albo nie jest plikiem zestawu: program wyjaśnia problem i ponawia pytanie o ścieżkę.
+  - 3b. Taki sam zestaw jest już wczytany: program informuje o tym i nie dodaje go drugi raz.
+- **Rezultat:** Program poprawnie wczytuje zestaw pytań, a zestaw jest dostępny do wczytania odpowiedzi (UC3) i wyświetlenia wyników (UC4).
+- **Ustalenia i pytania:**
+  - [Pytanie] Plik zestawu dla uczestników nie zawiera poprawnych odpowiedzi. Skąd program weźmie klucz odpowiedzi po wczytaniu zestawu, żeby ocenić quiz? Czy prowadzący ma osobny plik z kluczem?
+- **Powiązane wymagania:** brak, do dodania w requirements.md.
 
 ## Powiązania
 
@@ -114,7 +135,10 @@ Przypadki użycia (UC) opisują, jak użytkownik osiąga swój cel w aplikacji k
 | UC2 | Rozwiąż quiz lub wypełnij ankietę | US2 |
 | UC3 | Wczytaj zebrane odpowiedzi | US3 |
 | UC4 | Przejrzyj wyniki i wyeksportuj je do CSV | US4, US5 |
+| UC5 | Wczytaj zestaw z pliku | — |
 
-## Poza zakresem tej wersji
+## Brakujące przypadki użycia
 
-Edycja już utworzonego zestawu i przegląd listy zestawów należą do zakresu MVP z wizji, ale nie mają jeszcze własnego UC; dopiszemy je po potwierdzeniu zasad edycji ze sponsorem.
+Edycja utworzonego zestawu i przegląd listy zestawów należą do zakresu MVP z wizji, ale nie mają jeszcze własnych UC. Opiszemy je po ustaleniu zasad edycji ze sponsorem.
+
+- [Pytanie] Czy edytować można tylko zestaw nieopublikowany, czy po publikacji tworzy się nową wersję zestawu?
