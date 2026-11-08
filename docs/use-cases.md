@@ -18,14 +18,15 @@ Przypadki użycia (UC) opisują, jak użytkownik osiąga swój cel w aplikacji k
   4. Prowadzący dodaje pytanie: podaje treść, typ (jednokrotnego lub wielokrotnego wyboru) i opcje odpowiedzi; dla quizu wskazuje poprawne opcje.
   5. Program potwierdza dodanie pytania. Prowadzący powtarza krok 4 dla kolejnych pytań i kończy dodawanie.
   6. Prowadzący wybiera opcję publikacji zestawu.
-  7. Program sprawdza kompletność zestawu, oznacza go jako opublikowany (niezmienny) i zapisuje plik zestawu dla uczestników w formacie CSV pod podaną ścieżką.
-  8. Program potwierdza publikację i podaje ścieżkę pliku.
+  7. Program pyta o ścieżkę zapisu, a prowadzący ją podaje.
+  8. Program sprawdza kompletność zestawu, oznacza go jako opublikowany (niezmienny) i zapisuje plik zestawu dla uczestników w formacie CSV pod podaną ścieżką.
+  9. Program potwierdza publikację i podaje ścieżkę pliku.
 - **Alternatywy i błędy:**
   - 3a. Tytuł jest pusty: program informuje, że tytuł jest wymagany, i ponawia pytanie o tytuł.
   - 4a. Pytanie ma mniej niż dwie opcje albo pustą treść: program wyjaśnia, co poprawić, i nie dodaje pytania.
   - 4b. W quizie pytanie nie ma wskazanej poprawnej opcji: program nie dodaje pytania i wyjaśnia dlaczego. Ankieta nie wymaga poprawnych opcji.
   - 6a. Zestaw nie zawiera pytań: program odmawia publikacji i wraca do menu; zestaw pozostaje nieopublikowany.
-  - 7a. Nie można zapisać pliku (np. brak dostępu do folderu): program wyjaśnia problem, zestaw pozostaje nieopublikowany, a program ponawia pytanie o ścieżkę.
+  - 8a. Nie można zapisać pliku (np. brak dostępu do folderu): program wyjaśnia problem, zestaw pozostaje nieopublikowany, a program ponawia pytanie o ścieżkę.
 - **Rezultat:** Zestaw jest opublikowany i niezmienny, a prowadzący ma plik do przekazania uczestnikom.
 - **Ustalenia i pytania:**
   - [Ustalenie] Publikacja tworzy „zamrożoną” wersję zestawu do rozwiązania. Źródło: wizja.
