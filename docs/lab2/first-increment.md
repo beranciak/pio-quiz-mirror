@@ -35,7 +35,6 @@ To pionowy, demonstracyjny wycinek produktu, a nie komplet funkcji z UC2. Nie ob
 - Pytanie jednokrotnego wyboru ma domyślnie jedną poprawną opcję. Pytania otwarte nie są automatycznie oceniane, a wielokrotny wybór jest poza tym przyrostem.
 - Odpowiedź oraz wynik są przechowywane w pamięci operacyjnej w trakcie sesji. Trwała baza danych należy do kolejnego etapu projektu.
 - Są to wskazówki prowadzącego przekazane w odpowiedziach na pytania zespołów; zakres powyżej zawęża je do pierwszego przyrostu.
-- Pozostałe doprecyzowania zebrano w [notatce z odpowiedzi prowadzącego](teacher-clarifications.md).
 
 ## Projekt i weryfikacja
 

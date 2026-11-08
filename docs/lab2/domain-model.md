@@ -30,7 +30,7 @@ classDiagram
     }
     class QuizAnswer {
         +string QuestionId
-        +string SelectedOptionId
+        +string? SelectedOptionId
         +bool IsCorrect
     }
     Quiz "1" *-- "1..*" QuizQuestion : zawiera
