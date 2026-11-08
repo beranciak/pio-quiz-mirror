@@ -136,10 +136,9 @@ Przypadki użycia (UC) opisują, jak użytkownik osiąga swój cel w aplikacji k
 | UC3 | Wczytaj zebrane odpowiedzi | US3 |
 | UC4 | Przejrzyj wyniki i wyeksportuj je do CSV | US4, US5 |
 | UC5 | Wczytaj zestaw z pliku | — |
+
 ## Brakujące przypadki użycia
 
 Edycja utworzonego zestawu i przegląd listy zestawów należą do zakresu MVP z wizji, ale nie mają jeszcze własnych UC. Opiszemy je po ustaleniu zasad edycji ze sponsorem.
 
 - [Pytanie] Czy edytować można tylko zestaw nieopublikowany, czy po publikacji tworzy się nową wersję zestawu?
-
-Edycja już utworzonego zestawu i przegląd listy zestawów należą do zakresu MVP z wizji, ale nie mają jeszcze własnego UC; dopiszemy je po potwierdzeniu zasad edycji ze sponsorem.
