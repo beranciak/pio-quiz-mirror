@@ -49,3 +49,15 @@ Pracę organizujemy na tablicy GitHub Project.
 
 - Pytania z fazy *discovery* oraz odpowiedzi prowadzącego (sponsora) publikujemy na głównym kanale przedmiotu w MS Teams.
 - Bieżące sprawy organizacyjne, konsultacje, problemy zespołu i blokery, na przykład konflikty scalania, omawiamy na wewnętrznym kanale zespołu w MS Teams.
+
+## Pierwszy przyrost — LAB 2
+
+Przyrost obejmuje rozwiązanie przykładowego quizu z jednym pytaniem, zapis podejść w pamięci podczas działania programu oraz wyświetlenie wyników. Zakres, kryteria akceptacji, model domenowy, diagram sekwencji i strategia testów opisuje [dokumentacja przyrostu LAB 2](docs/lab2/first-increment.md).
+
+Prototyp jest obecnie zbudowany dla .NET 10; wersję dostępną na komputerach uczelnianych należy potwierdzić przed prezentacją.
+
+~~~powershell
+dotnet build Quiz.sln
+dotnet run --project src/Quiz.App/Quiz.App.csproj
+dotnet test Quiz.sln
+~~~

@@ -85,3 +85,5 @@ Jako prowadzący chcę wyeksportować wyniki do pliku CSV, aby otworzyć je w Ex
 | US3 | UC3 | Operacja 5: Wczytaj odpowiedzi uczestników |
 | US4 | UC4 | Pokaż wyniki (opisane tylko w menu) |
 | US5 | UC4 | Operacja 7: Eksportuj wyniki do CSV |
+
+Zakres i kryteria działającego prototypu LAB 2 są wyszczególnione w [opisie pierwszego przyrostu](lab2/first-increment.md); jego ograniczeń nie należy traktować jako kompletnej implementacji wszystkich User Stories.

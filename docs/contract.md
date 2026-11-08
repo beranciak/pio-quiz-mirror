@@ -248,3 +248,17 @@ Program: [wraca do menu głównego]
 ```
 
 **Dalsze zachowanie:** odpowiedź `t` kończy program; `n` wraca do menu. Inny wpis powoduje komunikat „Wpisz t (tak) lub n (nie).” i ponowienie pytania.
+
+## Zaimplementowany zakres prototypu LAB 2
+
+Powyższe operacje opisują docelowe scenariusze produktu. Bieżący prototyp realizuje tylko mały fragment UC2; jego dokładny dialog jest zgodny z [opisem pierwszego przyrostu](lab2/first-increment.md):
+
+~~~text
+Quiz / Ankieta
+1. Rozwiąż przykładowy quiz
+2. Pokaż wyniki bieżącej sesji
+0. Zakończ
+Wybierz opcję:
+~~~
+
+W quizie uczestnik podaje niepusty identyfikator, odpowiada na jedno pytanie jednokrotnego wyboru albo je pomija. Aplikacja sprawdza odpowiedź, przechowuje podejście w pamięci do zamknięcia procesu i pokazuje wynik. Import/eksport CSV, edycja zestawu, wiele pytań i trwały zapis nie są częścią prototypu LAB 2.

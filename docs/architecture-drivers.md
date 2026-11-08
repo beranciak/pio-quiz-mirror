@@ -19,7 +19,7 @@ Dokument porządkuje czynniki, które ukierunkowują projekt architektury aplika
 - **[Ustalenie]** Import i eksport danych odbywają się przez pliki CSV; wyniki mają nadawać się do Excela lub innego arkusza. Źródło: wizja.
 - **[Ustalenie]** Na tym etapie nie ma centralnego serwera ani współdzielenia danych online. Źródło: wizja.
 - **[Ustalenie]** Zestawy pytań i odpowiedzi mają być łatwe do przenoszenia między komputerami, a aplikacja ma uruchamiać się bez złożonej instalacji. Źródło: wizja.
-- **[Pytanie]** Jak dokładnie przekazujemy pliki (nośnik USB, udział sieciowy, inaczej) i jakie są warunki uruchomienia: czy na komputerach uczelnianych jest środowisko .NET, czy aplikacja ma być samodzielnym plikiem?
+- **[Wskazówka prowadzącego]** Zakładamy obecność .NET Runtime; aplikację self-contained można przygotować, ale nie jest to wymagane. Dokładną wersję .NET należy potwierdzić dla komputerów uczelnianych. Sposób przekazywania plików (np. pendrive) pozostaje do ustalenia.
 - **[Założenie]** Schemat CSV: separator `;` i kodowanie UTF-8, bo domyślna polska konfiguracja Excela rozpoznaje `;` jako separator. Do potwierdzenia testem otwarcia przykładowego pliku w Excelu (dotyczy też ewentualnego BOM).
 
 ## Business Constraints
@@ -50,8 +50,8 @@ Dokument porządkuje czynniki, które ukierunkowują projekt architektury aplika
 - **[Pytanie]** Czym różnią się wyniki quizu od wyników ankiety (np. punkty i poprawność kontra rozkład odpowiedzi)? Wizja każe to ustalić w discovery.
 - **[Pytanie]** Co oznacza „odpowiedź” w liczbach skali: jedna wybrana opcja w jednym pytaniu czy całe wypełnienie zestawu przez uczestnika? Od tego zależy, ile danych musi obsłużyć aplikacja.
 - **[Pytanie]** Jakie są zasady oceniania pytań wielokrotnego wyboru (wszystko albo nic, punkty częściowe)?
-- **[Pytanie]** Czy uczestnik widzi wynik quizu od razu po zakończeniu? Wizja mówi o „jasnym wyniku”, ale plik zestawu przekazywany uczestnikom nie powinien zawierać klucza poprawnych odpowiedzi.
-- **[Pytanie]** Czy ankieta ma być anonimowa, a quiz identyfikowany? Jak postępujemy z danymi (jak długo przechowujemy, kiedy usuwamy)?
+- **[Wskazówka prowadzącego]** Oceniany test wymaga identyfikatora; ankieta może być anonimowa. Pierwszy przyrost pokazuje wynik przykładowego quizu z kluczem zapisanym w aplikacji. Sposób oceniania i pokazywania wyników dla zestawów przekazywanych uczestnikom pozostaje do dopracowania.
+- **[Pytanie]** Jak długo przechowujemy dane i kiedy je usuwamy? Prowadzący wskazał, że polityka retencji plików należy do użytkownika; retencję danych w aplikacji trzeba jeszcze uzgodnić.
 - **[Pytanie]** Czy edycja dotyczy wyłącznie zestawów jeszcze niepublikowanych? Co zrobić z odpowiedziami już zebranymi, gdy prowadzący zechce poprawić pytanie?
 - **[Założenie]** Plik zestawu przekazywany uczestnikom nie zawiera poprawnych odpowiedzi; klucz pozostaje u prowadzącego. Do potwierdzenia ze sponsorem.
 
@@ -60,11 +60,11 @@ Dokument porządkuje czynniki, które ukierunkowują projekt architektury aplika
 - **Skala i wydajność**
   - **[Ustalenie]** Typowa grupa liczy 20–40 uczestników, sporadycznie do 100. Prowadzący może zgromadzić kilkaset quizów i ankiet oraz dziesiątki tysięcy odpowiedzi. Źródło: wizja.
   - **[Ustalenie]** Podczas zajęć nie chcemy czekać na podstawowe operacje. Źródło: wizja.
-  - **[Pytanie]** Których operacji dotyczy oczekiwanie (np. wczytanie odpowiedzi z folderu, obliczenie wyników, eksport CSV) i jaki czas jest akceptowalny przy uzgodnionej skali? Nie wpisujemy liczb, dopóki sponsor ich nie potwierdzi.
+  - **[Wskazówka prowadzącego]** Przy generowaniu statystyk trwającym ponad około 7 sekund należy pokazać postęp. Dokładne kryterium i operacje do pomiaru trzeba określić przed implementacją.
 - **Niezawodność i trwałość danych**
   - **[Ustalenie]** Aktualizacja aplikacji nie może powodować utraty istniejących quizów ani wyników. Źródło: wizja.
   - **[Ustalenie]** Aplikacja działa także bez internetu i bez usług chmurowych. Źródło: wizja.
-  - **[Pytanie]** Jaki poziom ochrony przed awarią jest wymagany (kopie zapasowe, odtwarzanie danych)? Dane w pamięci operacyjnej znikną po zamknięciu programu, więc musimy wiedzieć, kiedy i jak prowadzący zapisuje wyniki.
+  - **[Wskazówka prowadzącego]** W wersji końcowej trwałe przechowywanie w bazie jest wymagane; zapis danych na bieżąco ogranicza ryzyko ich utraty przy awarii. Pierwszy przyrost używa pamięci operacyjnej, a zasady kopii zapasowych i odtwarzania trzeba jeszcze zaprojektować.
 - **Użyteczność**
   - **[Ustalenie]** Prowadzący tworzy i uruchamia quiz lub ankietę na miejscu w kilka minut; uczestnik odpowiada szybko. Źródło: wizja.
   - **[Pytanie]** Co oznaczają „kilka minut” i „szybko” (dla ilu pytań, ile kroków)?

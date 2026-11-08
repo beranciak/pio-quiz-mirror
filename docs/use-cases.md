@@ -58,9 +58,10 @@ Przypadki użycia (UC) opisują, jak użytkownik osiąga swój cel w aplikacji k
 - **Ustalenia i pytania:**
   - [Ustalenie] Uczestnicy odpowiadają na osobnych komputerach bez internetu, a odpowiedzi eksportują do plików. Źródło: wizja.
   - [Ustalenie] Odpowiedź może zawierać identyfikator uczestnika. Źródło: wizja.
-  - [Pytanie] Czy identyfikator jest wymagany, opcjonalny czy zależny od rodzaju zestawu (ankieta anonimowa, quiz z identyfikatorem)?
-  - [Pytanie] Czy uczestnik widzi wynik quizu po zakończeniu? Jeśli tak, skąd program zna poprawne odpowiedzi, skoro plik zestawu ich nie zawiera?
-  - [Pytanie] Czy każde pytanie jest obowiązkowe, czy uczestnik może je pominąć?
+  - [Wskazówka prowadzącego] Oceniany test wymaga identyfikatora; ankieta może być anonimowa. Uczestnik może pominąć pytanie.
+  - [Wskazówka prowadzącego] Pytania otwarte są możliwe, lecz nie będą automatycznie oceniane. Pytanie zamknięte jednokrotnego wyboru ma domyślnie jedną poprawną odpowiedź; wielokrotny wybór jest opcjonalny.
+  - [Założenie pierwszego przyrostu] Przykładowy quiz ma klucz w aplikacji, więc po odpowiedzi uczestnik widzi wynik. Sposób pokazywania wyniku dla zestawów przenoszonych między komputerami należy dopracować wraz z formatem zestawu.
+  - [Zakres przyrostu] Działający wycinek UC2 opisano w [dokumentacji LAB 2](lab2/first-increment.md).
 - **Powiązane wymagania:** US2.
 
 ## UC3: Wczytaj zebrane odpowiedzi
