@@ -1,1 +1,1 @@
-Sprzęt: aparat, mikrofon
+Sprzęt: aparat, mikrofon, projektor
