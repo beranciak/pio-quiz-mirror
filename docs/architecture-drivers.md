@@ -84,3 +84,11 @@ Dokument porządkuje czynniki, które ukierunkowują projekt architektury aplika
 3. **Jedno narzędzie dla dwóch ról.** Zyskujemy prostszą dystrybucję (jeden program). Kosztem jest bardziej rozbudowane menu i brak mechanizmu uprawnień, więc uczestnik technicznie może użyć funkcji prowadzącego. Brak uprawnień jest świadomie poza zakresem.
 4. **Anonimowość a identyfikacja uczestnika.** Identyfikator ułatwia ocenianie i eksport wyników do ocen, ale zwiększa wrażliwość danych. Anonimowość chroni uczestników, lecz uniemożliwia przypisanie wyniku do osoby.
 5. **Zamrożona wersja zestawu a możliwość poprawek.** Niezmienny zestaw gwarantuje spójność wyników. Kosztem jest brak możliwości szybkiego poprawienia błędu w pytaniu po publikacji.
+
+### Wpływ operacji plikowych na architekturę (UC1 i UC5)
+
+* **Ograniczenia systemowe (Constraints):**
+  - Obsługa lokalnego systemu plików (I/O) wymaga weryfikacji uprawnień zapisu i odczytu po stronie systemu operacyjnego.
+* **Wymagania jakościowe (Quality Attributes):**
+  - **Bezpieczeństwo danych:** Odporność systemu na błędne lub uszkodzone pliki wejściowe podczas wykonywania procedury wczytywania (UC5).
+  - **Użyteczność:** Przejrzyste komunikaty o błędach w przypadku nieprawidłowej ścieżki zapisu podanej przez użytkownika (UC1).

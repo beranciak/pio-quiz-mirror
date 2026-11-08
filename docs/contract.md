@@ -29,6 +29,26 @@ Program: Wybierz opcję:
 
 Szczegółowo opisujemy operacje 4, 5, 7 i 0. Operacje 1, 2, 3 i 6 mają opis w przypadkach użycia (UC1, UC4) i zostaną rozwinięte w kolejnych iteracjach.
 
+## Operacja 1 oraz Operacja 3 (Modyfikacje UC1 i UC5)
+
+### UC1: Zapis zestawu danych do pliku
+* **Opis:** Użytkownik inicjuje proces zapisu aktualnie przetwarzanego zestawu danych w systemie.
+* **Przebieg interakcji:**
+  1. Użytkownik wybiera z menu opcję "Zapisz zestaw".
+  2. **System wyświetla zapytanie o podanie ścieżki zapisu oraz nazwy pliku.**
+  3. Użytkownik wprowadza docelową ścieżkę i zatwierdza wybór.
+  4. System weryfikuje poprawność ścieżki i zapisuje dane na dysku.
+
+### UC5: Wczytanie zestawu z pliku
+* **Opis:** Umożliwienie użytkownikowi załadowania zestawu danych z pliku na dysku.
+* **Operacja w menu głównym:**
+  - W menu głównym (opcja 3) obsłużono pozycję: **`3. Wczytaj zestaw z pliku CSV`**.
+* **Przebieg interakcji:**
+  1. Użytkownik wybiera z menu opcję 3.
+  2. System prosi o podanie ścieżki do pliku CSV z zestawem.
+  3. Użytkownik wskazuje plik i zatwierdza wybór.
+  4. System ładuje dane do pamięci operacyjnej i potwierdza operację komunikatem sukcesu.
+
 ## Formaty plików CSV (propozycja)
 
 Wszystkie pliki: kodowanie UTF-8, separator pól `;`, pierwszy wiersz to nagłówek. Listy wartości w jednym polu oddzielamy znakiem `|`.
