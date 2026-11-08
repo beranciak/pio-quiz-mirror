@@ -9,6 +9,8 @@ AC (kryteria akceptacji) dotyczą konkretnego wymagania lub zadania. DoD to wsp�
 Zadanie jest gotowe do rozpoczęcia, gdy:
 
 - jest to `Issue` (nie szkic) w repozytorium zespołu, dodane do tablicy ze statusem To do;
+- Issue ma przypisaną odpowiednią etykietę (np. documentation, question, bug), co ułatwia orientację na tablicy;
+- zakres zadania jest na tyle mały, że jego realizacja i review zajmą nie więcej niż 1-2 dni robocze;
 - opisano cel (po co robimy zadanie) i zakres, który mieści się w jednym małym PR;
 - opisano oczekiwany rezultat i miejsce, w którym powstanie (np. konkretny plik w `docs/`);
 - wiadomo, jak sprawdzimy wykonanie (kryteria akceptacji lub krótka lista kontrolna);
@@ -22,6 +24,8 @@ Zadanie jest gotowe do rozpoczęcia, gdy:
 - Rezultat spełnia cel i kryteria akceptacji `Issue`.
 - Treść jest spójna z README, wymaganiami i ustaleniami sponsora; domysły są oznaczone jako założenia lub pytania, a nie podane jako ustalenia.
 - Dokument sprawdzono w podglądzie Markdown (struktura nagłówków, listy, linki).
+- Treść dokumentu przeszła podstawową korektę językową (brak literówek, poprawna ortografia).
+- Branch z PR jest zaktualizowany względem gałęzi main (np. przez git rebase lub git merge main) i nie wykazuje konfliktów scalania.
 - PR ma opis: cel i zakres zmiany, powiązane `Issue` (`Closes #numer` lub `Refs #numer`) oraz sposób sprawdzenia rezultatu.
 - W PR nie ma plików tymczasowych ani niepowiązanych zmian; commity mają czytelne opisy.
 - Inna osoba wykonała review, uwagi rozpatrzono (poprawiono lub uzasadniono), a recenzent wybrał Approve.
@@ -29,6 +33,7 @@ Zadanie jest gotowe do rozpoczęcia, gdy:
 ### Po scaleniu (sprawdza autor)
 
 - PR jest scalony do `main` (scala autor po Approve).
+- Gałąź (branch) po pomyślnym scaleniu do main została usunięta z repozytorium (Delete branch).
 - Powiązane `Issue` jest zamknięte, a karta na tablicy ma status Done.
 - Autor pobrał `main` i sprawdził wynik.
 - Nowe pytania lub zadania wynikające z pracy zapisano jako `Issue` albo na właściwym kanale MS Teams.
