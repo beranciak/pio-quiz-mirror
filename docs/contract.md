@@ -27,27 +27,112 @@ Program: 0. Zakończ
 Program: Wybierz opcję:
 ```
 
-Szczegółowo opisujemy operacje 4, 5, 7 i 0. Operacje 1, 2, 3 i 6 mają opis w przypadkach użycia (UC1, UC4) i zostaną rozwinięte w kolejnych iteracjach.
+Szczegółowo opisujemy pierwszy fragment operacji 1 oraz operacje
+4, 5, 7 i 0. Operacje 2, 3 i 6 oraz dalsza część operacji 1
+będą rozwijane w kolejnych iteracjach.
 
-## Operacja 1 oraz Operacja 3 (Modyfikacje UC1 i UC5)
+## Operacja 1: Utwórz zestaw — pierwszy przyrost
 
-### UC1: Zapis zestawu danych do pliku
-* **Opis:** Użytkownik inicjuje proces zapisu aktualnie przetwarzanego zestawu danych w systemie.
-* **Przebieg interakcji:**
-  1. Użytkownik wybiera z menu opcję "Zapisz zestaw".
-  2. **System wyświetla zapytanie o podanie ścieżki zapisu oraz nazwy pliku.**
-  3. Użytkownik wprowadza docelową ścieżkę i zatwierdza wybór.
-  4. System weryfikuje poprawność ścieżki i zapisuje dane na dysku.
+**Powiązanie:** UC1 „Przygotuj i opublikuj zestaw”, kroki 1–3
+oraz alternatywa zachowania niedokończonego zestawu; fragment US1.
 
-### UC5: Wczytanie zestawu z pliku
-* **Opis:** Umożliwienie użytkownikowi załadowania zestawu danych z pliku na dysku.
-* **Operacja w menu głównym:**
-  - W menu głównym (opcja 3) obsłużono pozycję: **`3. Wczytaj zestaw z pliku CSV`**.
-* **Przebieg interakcji:**
-  1. Użytkownik wybiera z menu opcję 3.
-  2. System prosi o podanie ścieżki do pliku CSV z zestawem.
-  3. Użytkownik wskazuje plik i zatwierdza wybór.
-  4. System ładuje dane do pamięci operacyjnej i potwierdza operację komunikatem sukcesu.
+**Status:** propozycja doprecyzowania dialogu do uzgodnienia przez zespół.
+
+**Zakres:** wybór rodzaju, podanie tytułu i zachowanie pustego,
+nieopublikowanego zestawu w pamięci programu.
+
+Pierwszy przyrost nie obejmuje dodawania pytań ani publikacji.
+Po przygotowaniu pustego zestawu następuje pytanie o jego zachowanie
+przed powrotem do menu. Dalsze kroki UC1 będą dodane później.
+
+### Dialog poprawny
+
+```text
+Użytkownik: 1
+Program: Wybierz rodzaj: 1 — quiz, 2 — ankieta, 0 — powrót:
+Użytkownik: 1
+Program: Podaj tytuł lub 0, aby wrócić:
+Użytkownik: Stolice
+Program: Czy zachować niedokończony zestaw? (t/n):
+Użytkownik: t
+Program: Zachowano roboczy zestaw w pamięci. Zawiera 0 pytań.
+Program: [ponownie wyświetla menu główne]
+```
+
+**Wynik:** jeden zestaw rodzaju quiz, z tytułem „Stolice”,
+w stanie roboczym (nieopublikowanym), bez pytań.
+
+Dane pozostają dostępne tylko do zamknięcia programu.
+Ta operacja nie tworzy pliku ani rekordu w bazie danych.
+
+### Błędny rodzaj
+
+Wpis inny niż `1`, `2` albo `0` powoduje komunikat:
+
+```text
+Program: Wybierz 1, 2 albo 0.
+```
+
+Program ponawia pytanie o rodzaj. Nie tworzy zestawu.
+
+### Pusty tytuł
+
+Pusty wpis albo same białe znaki powodują komunikat:
+
+```text
+Program: Tytuł jest wymagany. Podaj tytuł zestawu.
+```
+
+Program ponawia pytanie o tytuł i zachowuje wcześniej wybrany rodzaj.
+
+### Rezygnacja i zachowanie zestawu
+
+- `0` przy wyborze rodzaju lub wpisywaniu tytułu oznacza powrót
+  do menu bez utworzenia zestawu.
+- Po podaniu poprawnego rodzaju i tytułu program przygotowuje
+  pusty zestaw i pyta, czy zachować go przed powrotem do menu.
+- Odpowiedź `t` dodaje zestaw do pamięci programu.
+- Odpowiedź `n` odrzuca zestaw i wyświetla:
+  „Anulowano tworzenie zestawu.”
+- Inna odpowiedź powoduje komunikat „Wpisz t (tak) lub n (nie).”
+  i ponowienie pytania.
+
+**Założenia do uzgodnienia:** tytuł równy dokładnie `0` jest
+zarezerwowany dla rezygnacji. Przed otrzymaniem poprawnego rodzaju
+i tytułu nie ma jeszcze zestawu, który można zachować.
+
+## Operacja 2: Opublikuj zestaw — dalsza część UC1
+
+Publikacja jest osobną operacją od utworzenia roboczego zestawu.
+
+Prowadzący wskazuje przygotowany zestaw oraz ścieżkę zapisu.
+Program sprawdza kompletność i zapisuje plik zestawu dla uczestników.
+
+Sukces oznacza utworzenie pliku i oznaczenie zestawu jako
+opublikowanego oraz niezmiennego.
+Jeżeli zapis się nie powiedzie, zestaw pozostaje nieopublikowany,
+a program wyjaśnia problem i ponawia pytanie o ścieżkę.
+
+Pusty zestaw nie może zostać opublikowany.
+Szczegółowy dialog publikacji zostanie rozwinięty osobno.
+
+## Operacja 3: Wczytaj zestaw z pliku CSV
+
+**Powiązanie:** UC5 „Wczytaj zestaw z pliku”.
+
+1. Użytkownik wybiera opcję 3.
+2. Program prosi o ścieżkę do pliku CSV.
+3. Użytkownik podaje ścieżkę albo wpisuje `0`, aby wrócić do menu.
+4. Program wczytuje i sprawdza plik.
+5. Po poprawnym wczytaniu dodaje zestaw do pamięci i podaje
+   jego tytuł, rodzaj oraz liczbę pytań.
+
+Brak pliku lub niepoprawny format powoduje komunikat błędu
+i ponowienie pytania o ścieżkę. Ten sam zestaw nie jest dodawany
+ponownie, zgodnie z UC5.
+
+Odtworzenie klucza poprawnych odpowiedzi prowadzącego pozostaje
+otwartym pytaniem opisanym w UC5.
 
 ## Formaty plików CSV (propozycja)
 
