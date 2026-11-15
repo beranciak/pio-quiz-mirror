@@ -140,7 +140,7 @@ Wszystkie pliki: kodowanie UTF-8, separator pól `;`, pierwszy wiersz to nagłó
 
 | Plik | Rola | Kolumny |
 | --- | --- | --- |
-| Zestaw dla uczestników | Wyjście operacji 2, wejście operacji 4 | `id_zestawu;wersja;rodzaj;tytul;nr_pytania;tresc;wybor;opcje` |
+| Zestaw dla uczestników | Wyjście operacji 2, wejście operacji 3 i 4 | `id_zestawu;wersja;rodzaj;tytul;nr_pytania;tresc;wybor;opcje` |
 | Odpowiedzi uczestnika | Wyjście operacji 4, wejście operacji 5 | `id_zestawu;wersja;id_uczestnika;nr_pytania;wybrane` |
 | Wyniki quizu | Wyjście operacji 7 | `id_uczestnika;punkty;maks_punkty;procent` |
 | Wyniki ankiety | Wyjście operacji 7 | `nr_pytania;opcja;liczba_wyborow` |
@@ -308,7 +308,7 @@ Program: Nie udało się zapisać pliku. Jeśli jest otwarty w innym programie (
 Program: Podaj ścieżkę ponownie albo wpisz 0, aby wrócić do menu:
 ```
 
-**Dalsze zachowanie:** program nie przerywa pracy, a wyniki pozostają w pamięci do czasu skutecznego zapisu.
+**Dalsze zachowanie:** program nie przerywa pracy, a wyniki pozostają w pamięci podczas dalszego działania programu. Zamknięcie programu bez eksportu powoduje ich utratę.
 
 ## Operacja 0: Zakończ
 
