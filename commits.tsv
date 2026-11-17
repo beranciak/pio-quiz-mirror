@@ -1,0 +1,31 @@
+0e3bdae	refs/heads/docs/sekwencja-24	PaWKo223	koscielakstudia@gmail.com	2026-11-15T11:17:06+01:00	Ujednolić kontrakt TUI z diagramem sekwencji UC1
+f208529	refs/heads/docs/sekwencja-24	PaWKo223	koscielakstudia@gmail.com	2026-11-15T11:05:38+01:00	Ujednolić kontrakt tworzenia zestawu z UC1 i diagramem sekwencji
+05bfec1	refs/heads/docs/sekwencja-24	PaWKo223	koscielakstudia@gmail.com	2026-11-15T11:03:39+01:00	Dodaj diagram sekwencji tworzenia roboczego zestawu
+e2c802c	refs/heads/docs/architektura-22	PaWKo223	koscielakstudia@gmail.com	2026-11-14T14:28:29+01:00	Dodaj ADR-001 z propozycją wyboru SQLite
+840d598	refs/heads/docs/architektura-22	PaWKo223	koscielakstudia@gmail.com	2026-11-14T14:25:31+01:00	Dodaj opis architektury C4 L1 i L2
+25ccff5	refs/heads/docs/model-danych	PaWKo223	koscielakstudia@gmail.com	2026-11-10T11:40:59+01:00	Dodaj projekt modelu danych dla UC1
+0a1e755	refs/heads/docs/model-domenowy	PaWKo223	koscielakstudia@gmail.com	2026-11-09T10:08:45+01:00	Dodaj model domenowy UML dla UC1
+0d87f94	refs/heads/feature/lab2-first-quiz-increment	PaWKo223	koscielakstudia@gmail.com	2026-11-08T15:37:14+01:00	docs: refine lab 2 diagrams
+a747617	refs/heads/feature/lab2-first-quiz-increment	PaWKo223	koscielakstudia@gmail.com	2026-11-08T15:35:53+01:00	feat: add first in-memory quiz increment
+9715845	refs/heads/main	PaWKo223	koscielakstudia@gmail.com	2026-11-08T11:59:54+01:00	Merge pull request #12 from UKW-Inzynieria-Oprogramowania-Labs-PB/docs/poprawa-wymagan
+b9829b1	refs/heads/main	Karol	karol.prywatny@wp.pl	2026-11-08T11:45:12+01:00	Dodanie lub modyfikacja  założeń i wymagań
+28177a0	refs/heads/main	jcobikk	237551195+jcobikk@users.noreply.github.com	2026-11-08T09:40:29+01:00	Merge pull request #10 from UKW-Inzynieria-Oprogramowania-Labs-PB/docs/contract-and-drivers-update
+4e5ddfd	refs/heads/main	PaWKo223	koscielakstudia@gmail.com	2026-11-08T09:32:14+01:00	Merge pull request #8 from UKW-Inzynieria-Oprogramowania-Labs-PB/konflikt-b
+7f165d9	refs/heads/docs/contract-and-drivers-update	jcobikk	237551195+jcobikk@users.noreply.github.com	2026-11-08T09:24:42+01:00	Aktualizacja contract.md oraz architecture-drivers.md Closes #9
+bf88ed6	refs/heads/konflikt-b	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T09:24:26+01:00	Merge remote-tracking branch 'origin/main' into konflikt-b
+e3291fc	refs/heads/main	PaWKo223	koscielakstudia@gmail.com	2026-11-08T09:20:53+01:00	Merge pull request #7 from UKW-Inzynieria-Oprogramowania-Labs-PB/konflikt-a
+cda6182	refs/heads/main	PaWKo223	koscielakstudia@gmail.com	2026-11-08T09:20:20+01:00	Merge pull request #6 from UKW-Inzynieria-Oprogramowania-Labs-PB/konflikt-base
+b132faf	refs/heads/konflikt-b	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T09:15:42+01:00	Konflikt B: dodany projektor
+a9a8e13	refs/heads/konflikt-a	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T09:15:41+01:00	Konflikt A: dodany mikrofon
+af0d93c	refs/heads/konflikt-base	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T09:15:40+01:00	Plik do ćwiczenia konfliktu (beranciak)
+27cad54	refs/heads/docs/contract-and-drivers-update	PaWKo223	koscielakstudia@gmail.com	2026-11-08T09:01:20+01:00	Merge pull request #4 from UKW-Inzynieria-Oprogramowania-Labs-PB/docs/poprawki-uc-ryzyka
+809ba71	refs/heads/docs/contract-and-drivers-update	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T02:12:56+01:00	Usunięty zdublowany akapit o edycji
+330ef4e	refs/heads/docs/contract-and-drivers-update	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T02:10:17+01:00	R2: ponowna ocena prawdopodobieństwa i nowe działanie; R4: strategia unikania
+2eea401	refs/heads/docs/contract-and-drivers-update	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T02:00:15+01:00	Edycja zestawu oznaczona jako brakujący UC zamiast poza zakresem
+d80e54e	refs/heads/docs/contract-and-drivers-update	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T01:58:42+01:00	UC1, UC2: alternatywa przerwania w trakcie
+bafe96a	refs/heads/docs/contract-and-drivers-update	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T01:54:32+01:00	Dodany UC5: wczytanie zestawu z pliku
+8da2ee8	refs/heads/docs/contract-and-drivers-update	beranciak	237567120+beranciak@users.noreply.github.com	2026-11-08T01:30:43+01:00	UC1: dodany krok z pytaniem o ścieżkę zapisu, poprawiona numeracja
+e6b4d10	refs/heads/docs/contract-and-drivers-update	PaWKo223	koscielakstudia@gmail.com	2026-10-23T09:25:21+02:00	Enhance pull request template with review steps
+3e0d2dd	refs/heads/docs/contract-and-drivers-update	PaWKo223	koscielakstudia@gmail.com	2026-10-18T08:44:04+02:00	repo
+3389e15	refs/heads/docs/project-docs-and-workflow	PaWKo223	koscielakstudia@gmail.com	2026-10-15T18:18:34+02:00	docs: expand project and team documentation
+64c2a28	refs/heads/docs/contract-and-drivers-update	PaWKo223	koscielakstudia@gmail.com	2026-10-15T17:22:21+02:00	docs: add project README

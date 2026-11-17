@@ -1,0 +1,11 @@
+docs/architektura-22	2026-11-14T14:28:29+01:00	PaWKo223	Dodaj ADR-001 z propozycją wyboru SQLite
+docs/contract-and-drivers-update	2026-11-08T09:24:42+01:00	jcobikk	Aktualizacja contract.md oraz architecture-drivers.md Closes #9
+docs/model-danych	2026-11-10T11:40:59+01:00	PaWKo223	Dodaj projekt modelu danych dla UC1
+docs/model-domenowy	2026-11-09T10:08:45+01:00	PaWKo223	Dodaj model domenowy UML dla UC1
+docs/project-docs-and-workflow	2026-10-15T18:18:34+02:00	PaWKo223	docs: expand project and team documentation
+docs/sekwencja-24	2026-11-15T11:17:06+01:00	PaWKo223	Ujednolić kontrakt TUI z diagramem sekwencji UC1
+feature/lab2-first-quiz-increment	2026-11-08T15:37:14+01:00	PaWKo223	docs: refine lab 2 diagrams
+konflikt-a	2026-11-08T09:15:41+01:00	beranciak	Konflikt A: dodany mikrofon
+konflikt-b	2026-11-08T09:24:26+01:00	beranciak	Merge remote-tracking branch 'origin/main' into konflikt-b
+konflikt-base	2026-11-08T09:15:40+01:00	beranciak	Plik do ćwiczenia konfliktu (beranciak)
+main	2026-11-08T11:59:54+01:00	PaWKo223	Merge pull request #12 from UKW-Inzynieria-Oprogramowania-Labs-PB/docs/poprawa-wymagan
